@@ -1,0 +1,16 @@
+.note_composer {
+    display: flex;
+    padding: 20px 0;
+    flex-shrink: 0;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.note_composer input {
+    flex-grow: 1;
+}
+
+.note_composer button {
+    margin-left: 10px;
+    flex-shrink: 0;
+}

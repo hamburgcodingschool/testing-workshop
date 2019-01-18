@@ -1,14 +1,115 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html {
+    box-sizing: border-box;
+    font-size: 10px;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+        'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    height: 100%;
+    background-color: #f9f9f9;
+    color: #202020;
+}
+
+:root {
+    --primary-color: #ae0001;
+    --primary-color-light: #f7e6e6;
+    --secondary-color: #6c63ff;
+    --secondary-color-light: #f0efff;
+
+    --normal-font-size: 1.5rem;
+}
+
+input {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: var(--normal-font-size);
+    border: 1px solid var(--secondary-color);
+}
+input:not([type='checkbox']) {
+    height: 40px;
+}
+input:focus,
+input:active {
+    outline: var(--secondary-color) auto 5px;
+    outline-offset: -2px;
+}
+
+button {
+    padding: 5px 10px;
+    font-size: var(--normal-font-size);
+    border-radius: 5px;
+    background-color: white;
+    height: 40px;
+}
+button:hover {
+    cursor: pointer;
+}
+button.primary {
+    border-color: var(--secondary-color);
+    background-color: var(--secondary-color-light);
+}
+button.primary:hover {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+button.primary:focus,
+button.primary:active {
+    outline: var(--secondary-color) auto 5px;
+    outline-offset: -2px;
+}
+
+button.simple {
+    border: none;
+    background: none;
+}
+button.simple:hover {
+    box-shadow: none;
+    border: none;
+    background: none;
+    text-decoration: underline;
+}
+button.simple:focus,
+button.simple:active {
+    outline: var(--secondary-color) auto 5px;
+    outline-offset: -2px;
+}
+
+button.danger:not(.simple) {
+    border-color: var(--primary-color);
+    background-color: var(--primary-color-light);
+}
+button.danger:not(.simple):hover {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+button.danger:hover {
+    color: var(--primary-color);
+}
+button.danger:focus,
+button.danger:active {
+    outline: var(--primary-color) auto 5px !important;
+    outline-offset: -2px;
+}
+
+button.text {
+    display: inline;
+    border: none;
+    /* padding: 0 10px; */
+    background: none;
+    text-decoration: underline;
+    vertical-align: baseline;
+    height: auto;
+}
+button.text:focus,
+button.text:active {
+    outline: var(--secondary-color) auto 5px;
+    outline-offset: -2px;
 }

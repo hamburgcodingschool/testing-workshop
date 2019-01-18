@@ -1,0 +1,11 @@
+.delete_all {
+    margin-top: 20px;
+    color: gray;
+}
+
+.delete_all__confirmation {
+    margin-top: 20px;
+}
+.delete_all__confirmation button:first-of-type {
+    margin-right: 10px;
+}

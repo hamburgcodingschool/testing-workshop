@@ -1,0 +1,19 @@
+.notes_list {
+    width: 80%;
+    margin: 20px auto;
+    flex-grow: 1;
+    overflow: auto;
+}
+
+.notes_list .empty_screen {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: var(--normal-font-size);
+    align-items: center;
+}
+
+.notes_list .empty_screen img {
+    width: 40%;
+    margin-bottom: 20px;
+}
