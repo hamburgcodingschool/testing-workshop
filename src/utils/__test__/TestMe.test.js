@@ -6,6 +6,16 @@ test('fail function should fail', () => {
   expect(() => fail(true)).toThrow('Failure!');
 })
 
+test('fail function should not fail', () => {
+  expect(() => fail()).not.toThrow();
+})
+
+test('wait function should wait a custom time', async () => {
+  const promise = wait(100);
+  jest.runAllTimers();
+  await expect(promise).resolves.toBe('done');
+})
+
 test('wait function should return promise that resolves', async () => {
   const promise = wait(1000);
   const spy = jest.fn();
