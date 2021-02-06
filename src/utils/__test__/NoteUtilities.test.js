@@ -42,7 +42,7 @@ describe('NoteUtilities', () => {
 
         })
 
-        it('limits text to 80 chars when nothing else is given', () => {
+        it('limits text to 80 chars when no limit argument is passed', () => {
 
         })
     })
